@@ -42,7 +42,7 @@ $(document).ready(function () {
             console.log("Input feild missing.");
         } else { // ELSE VALUE IS THERE RUN THE CODE
             // PUSH THE DATA TO THE DATABASE 
-            database.ref().push({
+            var newRef = database.ref().push({
                 title: titleValue,
                 host: hostValue,
                 date: dateValue,
@@ -50,6 +50,7 @@ $(document).ready(function () {
                 location: locationValue,
                 description: descriptionValue
             });
+            window.location = "event.html?id="+newRef.key
             // CLEAR INPUT FEILDS
             $("input").val("");
             $("textarea").val("");
