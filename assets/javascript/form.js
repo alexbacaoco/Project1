@@ -10,11 +10,10 @@ $(document).ready(function () {
     var eventTime = $("#event-time");
     var eventLocation = $("#event-location");
     var eventDescription = $("#event-description");
-
-// =================== ONCLICK ======================
-
-    $("#submit").on("click", function (event) {
-        event.preventDefault();
+// =================== FUNCTION ======================
+    
+    // FUNCITON TO REDIRECT PAGE 
+    function submitForm() {
         // GET INPUT VALUES
         var titleValue = eventTitle.val().trim();
         var hostValue = eventHost.val().trim();
@@ -29,8 +28,8 @@ $(document).ready(function () {
             timeValue === "" || 
             locationValue === "") {
             // RUN FUCNTION FOR MISSING FEILDS
-            
-        } else { // ELSE VALUE IS THERE RUN THE CODE
+            console.log("Missing Info");
+        } else { // ELSE PUSH VALUE TO THE DATABASE
             // PUSH THE DATA TO THE DATABASE 
             var newRef = database.ref().push({
                 title: titleValue,
@@ -44,6 +43,14 @@ $(document).ready(function () {
             // CLEAR INPUT FEILDS
             $("input").val("");
             $("textarea").val("");
-        }
+        } // END ELSE STATEMENT
+    };
+
+// =================== ONCLICK ======================
+
+    $("#add-event").on("click", function (event) {
+        event.preventDefault();
+        // CALL THE SUBMIT FUCNTION TO REDIRECT
+        submitForm();
     }); // END CLICK FUNCTION
 }); // END READY FUNCTION

@@ -1,22 +1,60 @@
 <html>
-    <head></head>
-    <body>
-            <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
-                authDomain: "ajja-party-evite.firebaseapp.com",
-                databaseURL: "https://ajja-party-evite.firebaseio.com",
-                projectId: "ajja-party-evite",
-                storageBucket: "ajja-party-evite.appspot.com",
-                messagingSenderId: "128520116147"
-            };
-    
-            firebase.initializeApp(config);
-        </script>
-        <script src="assets/javascript/event.js"></script>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h1 class="text-center" id="eventTitle">
+                    <!-- EVENT TITLE -->
+                </h1>
+                <p class="text-center" id="eventHost">
+                    <!-- EVENT HOST -->
+                </p>
+            </div>
+        </div>
+        <!-- END JUMBOTRON -->
+        <div class="row">
+            <div class="panel panel-default col-md-12 col-sm-12 col-xs-12">
+                <div class="panel-body">
+                    <div id="event-info">
+                        <p id="eventDate">
+                            <!-- EVENT DATE -->
+                        </p>
+                        <p id="eventTime">
+                            <!-- EVENT TIME -->
+                        </p>
+                        <p id="eventLocation">
+                            <!-- EVENT LOCATION -->
+                        </p>
+                    <!-- IF DESCRIPTION HAS INPUT DISPLAY HERE -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
+            authDomain: "ajja-party-evite.firebaseapp.com",
+            databaseURL: "https://ajja-party-evite.firebaseio.com",
+            projectId: "ajja-party-evite",
+            storageBucket: "ajja-party-evite.appspot.com",
+            messagingSenderId: "128520116147"
+        };
+
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/event.js"></script>
+</body>
+
 </html>
