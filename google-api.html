@@ -1,3 +1,5 @@
+<!-- this html file goes with google-api.js -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -141,7 +143,7 @@
         var me = this;
         autocomplete.bindTo('bounds', this.map);
         autocomplete.addListener('place_changed', function() {
-          var place = $("#location-input"());
+          var place = autocomplete.getPlace();
           if (!place.place_id) {
             window.alert("Please select an option from the dropdown list.");
             return;
