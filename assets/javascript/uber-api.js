@@ -1,8 +1,6 @@
 //this js file is for event.html
 
-//We are going to be making HTTP request using axios
-
-//3 API requests: HTML (geolocation), Google Maps (event lat/long), Uber (time estimate), Uber (price estimate)
+//4 API requests: HTML (geolocation), Google Maps (event lat/long), Uber (time estimate), Uber (price estimate)
 
 
 //API used: Uber API
@@ -25,6 +23,8 @@ function timeEstimate(pos, eventPos) {
         .catch(function(error) {
             console.log(error)
         })
+
+    //add HTML display functionality here
 }
 
 //API used: Uber API
@@ -48,27 +48,29 @@ function priceEstimate(pos, eventPos) {
         .catch(function(error) {
             console.log(error)
         })
+
+    //add HTML display functionality here    
 }
 
 
-//----------------------------------To Add To Google API----------------------------------------
-//APIs used: Google Maps and HTML geolocation
-//This needs to go in Alex's Google API code?
-var geocoder = new google.maps.Geocoder();
-var address = event-location;
-//use jquery here to get the event address thee user inputted
+// //----------------------------------To Add To Google API----------------------------------------
+// //APIs used: Google Maps and HTML geolocation
+// //This needs to go in Alex's Google API code?
+// var geocoder = new google.maps.Geocoder();
+// var address = event-location;
+// //use jquery here to get the event address thee user inputted
 
-geocoder.geocode({ 'event-location': address }, function(results, status) {
+// geocoder.geocode({ 'event-location': address }, function(results, status) {
 
-    if (status == google.maps.GeocoderStatus.OK) {
-        var eventPos = {}
-        eventPos.latitude = results[0].geometry.location.lat();
-        eventPos.longitude = results[0].geometry.location.lng();
+//     if (status == google.maps.GeocoderStatus.OK) {
+//         var eventPos = {}
+//         eventPos.latitude = results[0].geometry.location.lat();
+//         eventPos.longitude = results[0].geometry.location.lng();
 
-        navigator.geolocation.getCurrentPosition(function(getPosition) {
-            console.log(position)
-            timeEstimate(position, eventPos)
-            priceEstimate(position, eventPos)
-        });
-    }
-});
+//         navigator.geolocation.getCurrentPosition(function(getPosition) {
+//             console.log(position)
+//             timeEstimate(position, eventPos)
+//             priceEstimate(position, eventPos)
+//         });
+//     }
+// });
