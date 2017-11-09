@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>AJJA Event Planning </title>
     <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Firebase link -->
 </head>
 
@@ -23,8 +22,8 @@
 
         <!-- Sign-Up Panel-->
         <div class="col-md-12 panel panel-heading">
-            <h3 class="panel-title">Create your event: </h3>
-        </div>
+              <h3 class="panel-title">Create your event: </h3>
+            </div>
 
         <!--  Form -->
 
@@ -33,61 +32,50 @@
             <form role="form">
                 <div class="form-group">
                     <label for="name-input">Event Title:</label>
-                    <input class="form-control" id="event-title" type="text">
+                    <input class="form-control" id="name-input" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="host-input">Hosted by:</label>
-                    <input class="form-control" id="event-host" type="text">
+                    <input class="form-control" id="host-input" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="date-input">Date:</label>
-                    <input class="form-control" id="event-date" type="date">
+                    <input class="form-control" id="date-input" type="date">
                 </div>
 
                 <div class="form-group">
                     <label for="time-input">Time:</label>
-                    <input class="form-control" id="event-time" type="time">
+                    <input class="form-control" id="time-input" type="time">
                 </div>
 
 
-                <!--    jQuery Geocoding and Places Autocomplete Plugin ADD TO ADDR????  -->
+                 <!--    jQuery Geocoding and Places Autocomplete Plugin ADD TO ADDR????  -->
 
                 <div class="form-group">
                     <label for="location-input">Where</label>
-                    <input class="form-control" id="event-location" type="city">
+                    <input class="form-control" id="location-input" type="city">
                 </div>
 
 
                 <div class="form-group">
                     <label for="description-input">Description</label>
-                    <textarea class="form-control" id="event-description" rows="5"></textarea>
+                    <textarea class="form-control" id="description-input" rows="5"></textarea>
                 </div>
-                <button class="btn btn-default" id="submit" type="submit">Share!</button>
+                <button class="btn btn-default" id="add-event" type="submit">Share!</button>
             </form>
         </div>
     </div>
 
 
-    <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="assets/javascript/form.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
-            authDomain: "ajja-party-evite.firebaseapp.com",
-            databaseURL: "https://ajja-party-evite.firebaseio.com",
-            projectId: "ajja-party-evite",
-            storageBucket: "ajja-party-evite.appspot.com",
-            messagingSenderId: "128520116147"
-        };
+    <!-- jQuery minified-->
 
-        firebase.initializeApp(config);
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+    
+
+
+    <!--   Firebase -->
 </body>
 
 </html>
