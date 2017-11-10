@@ -18,7 +18,7 @@
         </div>
         <!-- END JUMBOTRON -->
         <div class="row">
-            <div class="panel panel-default col-md-12 col-sm-12 col-xs-12">
+            <div class="panel panel-default col-md-6 col-sm-12 col-xs-12">
                 <div class="panel-body">
                     <div id="event-info">
                         <p id="eventDate">
@@ -30,13 +30,33 @@
                         <p id="eventLocation">
                             <!-- EVENT LOCATION -->
                         </p>
-                    <!-- IF DESCRIPTION HAS INPUT DISPLAY HERE -->
+                        <!-- IF DESCRIPTION HAS INPUT DISPLAY HERE -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <!-- SHARE EMAIL -->
+                        <a id="share-email" href="" target="_blank">
+                            <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email" />
+                        </a>
+                        <!-- SHARE TWITTER -->
+                        <a id="share-twitter" href="" target="_blank">
+                            <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter" />
+                        </a>
+                        <!-- SHARE WHATSAPP -->
+                        <a id="share-whatsApp" href=""
+                            target="_blank">
+                            <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/whatsapp.png" border="0" alt="WhatsApp"/>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- END CONTAINER -->
+    <!--  -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
@@ -53,6 +73,7 @@
 
         firebase.initializeApp(config);
     </script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/javascript/event.js"></script>
 </body>
