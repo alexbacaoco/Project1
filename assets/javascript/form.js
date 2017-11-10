@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    console.log("hello")
     // DECLARE DATABASE VARIABLE 
     var database = firebase.database();
 

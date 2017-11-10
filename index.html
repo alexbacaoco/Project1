@@ -70,12 +70,21 @@
 
 
     <!-- jQuery minified-->
-
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
+        authDomain: "ajja-party-evite.firebaseapp.com",
+        databaseURL: "https://ajja-party-evite.firebaseio.com",
+        projectId: "ajja-party-evite",
+        storageBucket: "ajja-party-evite.appspot.com",
+        messagingSenderId: "128520116147"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
-    
-
-
-    <!--   Firebase -->
+    <script src="assets/javascript/form.js"></script>
 </body>
 
 </html>
