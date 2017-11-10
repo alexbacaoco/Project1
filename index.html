@@ -32,22 +32,22 @@
             <form role="form">
                 <div class="form-group">
                     <label for="name-input">Event Title:</label>
-                    <input class="form-control" id="name-input" type="text">
+                    <input class="form-control" id="event-title" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="host-input">Hosted by:</label>
-                    <input class="form-control" id="host-input" type="text">
+                    <input class="form-control" id="event-host" type="text">
                 </div>
 
                 <div class="form-group">
                     <label for="date-input">Date:</label>
-                    <input class="form-control" id="date-input" type="date">
+                    <input class="form-control" id="event-date" type="date">
                 </div>
 
                 <div class="form-group">
                     <label for="time-input">Time:</label>
-                    <input class="form-control" id="time-input" type="time">
+                    <input class="form-control" id="event-time" type="time">
                 </div>
 
 
@@ -55,13 +55,13 @@
 
                 <div class="form-group">
                     <label for="location-input">Where</label>
-                    <input class="form-control" id="location-input" type="city">
+                    <input class="form-control" id="event-location" type="city">
                 </div>
 
 
                 <div class="form-group">
                     <label for="description-input">Description</label>
-                    <textarea class="form-control" id="description-input" rows="5"></textarea>
+                    <textarea class="form-control" id="event-description" rows="5"></textarea>
                 </div>
                 <button class="btn btn-default" id="add-event" type="submit">Share!</button>
             </form>
@@ -70,12 +70,21 @@
 
 
     <!-- jQuery minified-->
-
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
+        authDomain: "ajja-party-evite.firebaseapp.com",
+        databaseURL: "https://ajja-party-evite.firebaseio.com",
+        projectId: "ajja-party-evite",
+        storageBucket: "ajja-party-evite.appspot.com",
+        messagingSenderId: "128520116147"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
-    
-
-
-    <!--   Firebase -->
+    <script src="assets/javascript/form.js"></script>
 </body>
 
 </html>
