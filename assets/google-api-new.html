@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Geolocation</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/Users/alex/Desktop/coding bootcamp/projects/Project1/assets/form.css">
+    <link rel="stylesheet" type="text/css" href="/Users/alex/Desktop/coding bootcamp/projects/Project1/assets/google-api.css">
   </head>
-
   <body>
+      <div id="floating-panel">
+        <input id="origin-input" class="controls" type="text" placeholder="enter current location">
         <input id="destination-input" class="controls" type="text"
         placeholder="Enter a destination location">
+      </div>
 
     <div id="map"></div>
     <script>
-
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
 
       var map, infoWindow;
       function initMap() {
@@ -101,6 +97,35 @@
 
         this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(event-location);
       }
+
+    // function getDirections(request) {
+    //   var directionsRequest = {
+    //     origin : pos,
+    //     destination : destinationInput,
+    //     travelMode: google.maps.DirectionsTravelMode.DRIVING,
+    //     unitSystem  : google.maps.getSelectedUnitSystem(),
+    //     };
+
+    //   // check if user clicked 'use current location'
+    //     if (request === 'geo') {
+    //       var geoLatLng = new google.maps.LatLng( lat , lng );
+    //       directionsRequest.origin = pos;
+    //     }
+ 
+    //     google.maps.directionsService.route(directionsRequest, google.maps.showDirections);
+    // },
+
+    // function showDirections() {
+    //   showDirections:function (dirResult, dirStatus) {
+    // if (dirStatus != google.maps.DirectionsStatus.OK) {
+    // }
+
+    // // Show directions
+    // google.maps.DirectionsRenderer.setMap(google.maps(map));
+    // google.maps.DirectionsRenderer.setDirections(directionsResult);
+    // }
+
+    // }
 
     </script>
     <script async defer
