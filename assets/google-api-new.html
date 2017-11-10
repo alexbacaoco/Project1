@@ -7,8 +7,15 @@
     <link rel="stylesheet" type="text/css" href="/Users/alex/Desktop/coding bootcamp/projects/Project1/assets/google-api.css">
   </head>
   <body>
+    <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAkc5GkatBLx3eNsZ4MwPMhp048JtK8TNE
+    &q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe>
       <div id="floating-panel">
-        <input id="origin-input" class="controls" type="text" placeholder="enter current location">
+        <input id="origin-input" class="controls" type="text" placeholder="Enter current location">
         <input id="destination-input" class="controls" type="text"
         placeholder="Enter a destination location">
       </div>
@@ -49,7 +56,7 @@
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
                               'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
+                              'Error: Your browser does not support geolocation.');
         infoWindow.open(map);
       }
 
@@ -63,7 +70,7 @@
           }
 
       function calcRoute() {
-        var start = document.getElementbyId('start').value;
+        var start = document.getElementbyId(pos).value;
         var end = document.getElementbyId('end').value;
         var request = {
           origin: start,
@@ -106,7 +113,7 @@
     //     unitSystem  : google.maps.getSelectedUnitSystem(),
     //     };
 
-    //   // check if user clicked 'use current location'
+    //   // Check if user clicked 'use current location'
     //     if (request === 'geo') {
     //       var geoLatLng = new google.maps.LatLng( lat , lng );
     //       directionsRequest.origin = pos;
