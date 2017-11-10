@@ -2,12 +2,9 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--   <link rel="stylesheet" type="text/css" href="/Users/alex/Desktop/coding bootcamp/projects/Project1/assets/google-api-new.css"> -->
 </head>
 
 <body>
-    <!--      <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBC7YuGb7yZa04LS7hRiCmimkhElWpSf24&origin=Irvine+California&destination=University+California+Irvine&avoid=tolls|highways" allowfullscreen>
-            </iframe> -->
     <div class="container">
         <div class="row">
             <div class="jumbotron">
@@ -21,7 +18,7 @@
         </div>
         <!-- END JUMBOTRON -->
         <div class="row">
-            <div class="panel panel-default col-md-6 col-sm-12 col-xs-12">
+            <div class="panel panel-default col-md-9 col-sm-12 col-xs-12">
                 <div class="panel-body">
                     <div id="event-info">
                         <p id="eventDate">
@@ -37,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <!-- SHARE EMAIL -->
@@ -49,7 +46,8 @@
                             <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter" />
                         </a>
                         <!-- SHARE WHATSAPP -->
-                        <a id="share-whatsApp" href="" target="_blank">
+                        <a id="share-whatsApp" href=""
+                            target="_blank">
                             <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/whatsapp.png" border="0" alt="WhatsApp"/>
                         </a>
                     </div>
@@ -63,18 +61,20 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
-        authDomain: "ajja-party-evite.firebaseapp.com",
-        databaseURL: "https://ajja-party-evite.firebaseio.com",
-        projectId: "ajja-party-evite",
-        storageBucket: "ajja-party-evite.appspot.com",
-        messagingSenderId: "128520116147"
-    };
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
+            authDomain: "ajja-party-evite.firebaseapp.com",
+            databaseURL: "https://ajja-party-evite.firebaseio.com",
+            projectId: "ajja-party-evite",
+            storageBucket: "ajja-party-evite.appspot.com",
+            messagingSenderId: "128520116147"
+        };
 
-    firebase.initializeApp(config);
+        firebase.initializeApp(config);
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/javascript/event.js"></script>
 </body>
 
