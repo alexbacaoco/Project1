@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    console.log("hello")
     // DECLARE DATABASE VARIABLE 
     var database = firebase.database();
 
@@ -10,37 +10,26 @@ $(document).ready(function () {
     var eventTime = $("#event-time");
     var eventLocation = $("#event-location");
     var eventDescription = $("#event-description");
-
-    // =================== FUNCTIONS =====================
-
-
-
-    // =================== ONCLICK ======================
-
-    $("#submit").on("click", function (event) {
-        console.log("We in this b****!");
-        event.preventDefault();
+// =================== FUNCTION ======================
+    
+    // FUNCITON TO REDIRECT PAGE 
+    function submitForm() {
         // GET INPUT VALUES
         var titleValue = eventTitle.val().trim();
-        console.log(titleValue);
         var hostValue = eventHost.val().trim();
-        console.log(hostValue);
         var dateValue = eventDate.val().trim();
-        console.log(dateValue);
         var timeValue = eventTime.val().trim();
-        console.log(timeValue);
         var locationValue = eventLocation.val().trim();
-        console.log(locationValue);
         var descriptionValue = eventDescription.val().trim();
-        console.log(descriptionValue);
         // IF IPUT LEFT EMPTY DONT PUSH TO DATABASE
         if (titleValue === "" || 
             hostValue === "" || 
             dateValue === "" ||
             timeValue === "" || 
             locationValue === "") {
-            console.log("Input feild missing.");
-        } else { // ELSE VALUE IS THERE RUN THE CODE
+            // RUN FUCNTION FOR MISSING FEILDS
+            console.log("Missing Info");
+        } else { // ELSE PUSH VALUE TO THE DATABASE
             // PUSH THE DATA TO THE DATABASE 
             var newRef = database.ref().push({
                 title: titleValue,
@@ -54,6 +43,14 @@ $(document).ready(function () {
             // CLEAR INPUT FEILDS
             $("input").val("");
             $("textarea").val("");
-        }
+        } // END ELSE STATEMENT
+    };
+
+// =================== ONCLICK ======================
+
+    $("#add-event").on("click", function (event) {
+        event.preventDefault();
+        // CALL THE SUBMIT FUCNTION TO REDIRECT
+        submitForm();
     }); // END CLICK FUNCTION
 }); // END READY FUNCTION
