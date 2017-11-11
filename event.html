@@ -9,10 +9,15 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="jumbotron">
-                <h1 class="text-center" id="eventTitle">
+            <div class="jumbotron text-center">
+                <h1 class="" id="eventTitle">
                     <!-- EVENT TITLE -->
                 </h1>
+                <p>
+                    <strong>
+                        Your Host
+                    </strong>
+                </p>
                 <p class="text-center" id="eventHost">
                     <!-- EVENT HOST -->
                 </p>
@@ -20,70 +25,103 @@
         </div>
         <!-- END JUMBOTRON -->
         <div class="row">
-            <div class="panel panel-default col-md-9 col-sm-12 col-xs-12">
-                <div class="panel-body">
-                    <div id="event-info">
-                        <p id="eventDate">
-                            <!-- EVENT DATE -->
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <p>
+                            <strong>
+                                Event Info
+                            </strong>
                         </p>
-                        <p id="eventTime">
-                            <!-- EVENT TIME -->
-                        </p>
-                        <p id="eventLocation">
-                            <!-- EVENT LOCATION -->
-                        </p>
-                        <!-- IF DESCRIPTION HAS INPUT DISPLAY HERE -->
+                    </div>
+                    <div class="panel-body">
+                        <div id="event-info">
+                            <p id="eventDate">
+                                <!-- EVENT DATE -->
+                            </p>
+                            <p id="eventTime">
+                                <!-- EVENT TIME -->
+                            </p>
+                            <p id="eventLocation">
+                                <!-- EVENT LOCATION -->
+                            </p>
+                            <!-- IF DESCRIPTION HAS INPUT DISPLAY HERE -->
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="panel panel-default">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <p>
+                            <strong>
+                                Share Event
+                            </strong>
+                        </p>
+                    </div>
                     <div class="panel-body">
                         <!-- SHARE EMAIL -->
-                        <a id="share-email" href="" target="_blank">
-                            <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email" />
-                        </a>
-                        <!-- SHARE TWITTER -->
-                        <a id="share-twitter" href="" target="_blank">
-                            <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter" />
-                        </a>
-                        <!-- SHARE WHATSAPP -->
-                        <a id="share-whatsApp" href=""
-                            target="_blank">
-                            <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/whatsapp.png" border="0" alt="WhatsApp"/>
-                        </a>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a id="share-email" href="" target="_blank">
+                                    <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/>
+                                </a>
+                            </div>
+                            <!-- SHARE TWITTER -->
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a id="share-twitter" href="" target="_blank">
+                                    <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter" />
+                                </a>
+                            </div>
+                            <!-- SHARE WHATSAPP -->
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a id="share-whatsApp" href="" target="_blank">
+                                    <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/whatsapp.png" border="0" alt="WhatsApp" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default col-md-6 col-sm-6 col-xs-6">
-            <div class="panel-heading">Need a ride? Get there with Uber!</div>
-            <!-- Trigger the modal with a button -->
-            <button type="button" id="uber-submit" class="btn btn-info btn-lg center-block">Get Estimates</button>
-            <div class="table">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Estimates
-                                <th>uberX</th>
-                                <th>uberXL</th>
-                                <th>uberBLACK</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Time</td>
-                            <td id="uber_x_time"> -- mins</td>
-                            <td id="uber_xl_time"> -- mins</td>
-                            <td id="uber_black_time"> -- mins</td>
-                            <tr>
-                                <td>Price</td>
-                                <td id="uber_x_price">$--.--</td>
-                                <td id="uber_xl_price">$--.--</td>
-                                <td id="uber_black_price">$--.--</td>
-                            </tr>
-                    </tbody>
-                </table>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <strong>
+                            Need a ride? Get there with Uber!
+                        </strong>
+                    </div>
+                    <!-- Trigger the modal with a button -->
+                    <div class="panel-body">
+                        <button type="button" id="uber-submit" class="btn btn-info btn-lg center-block">Get Estimates</button>
+                        <div class="table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Estimates
+                                            <th>uberX</th>
+                                            <th>uberXL</th>
+                                            <th>uberBLACK</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Time</td>
+                                        <td id="uber_x_time"> -- mins</td>
+                                        <td id="uber_xl_time"> -- mins</td>
+                                        <td id="uber_black_time"> -- mins</td>
+                                        <tr>
+                                            <td>Price</td>
+                                            <td id="uber_x_price">$--.--</td>
+                                            <td id="uber_xl_price">$--.--</td>
+                                            <td id="uber_black_price">$--.--</td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
