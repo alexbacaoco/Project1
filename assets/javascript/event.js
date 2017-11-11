@@ -91,13 +91,13 @@ $(document).ready(function() {
 
     // CALL FUNCTIONS ON READY
     shareUrl();
-    getTimeEstimate();
-    getPriceEstimate();
+    // getTimeEstimate();
+    // getPriceEstimate();
 
      
 
-    getTimeEstimate();
-    getPriceEstimate();
+    // getTimeEstimate();
+    // getPriceEstimate();
     // ================= ON CLICKS ===================
 
 }); // END READY FUNCTION
