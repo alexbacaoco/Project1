@@ -56,7 +56,10 @@ function getPriceEstimate(pos, eventPos) {
 $("#uber-submit").on("click", function(e) {
     var geocoder = new google.maps.Geocoder();
     // should be gotten from firebase object
-    var address = "24112 el tiradore cir mission viejo ca"
+    // we need make event address a global variable
+    var address = database.ref().val().location;
+    console.log(address);
+
     geocoder.geocode({ address: address }, function(results, status) {
 
         if (status == google.maps.GeocoderStatus.OK) {
@@ -74,6 +77,10 @@ $("#uber-submit").on("click", function(e) {
 
     e.preventDefault();
 })
+
+// //dataRef.ref().on("#uber-submit", function (snap) {
+//     eventLocation = snap.val();
+// }); 
 
 //Estimated Trip Time Post Function
 // document.getElementById('timeModal').addEventListener('onclick', performPostRequest);
