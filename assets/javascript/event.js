@@ -1,3 +1,4 @@
+var snap;
 $(document).ready(function() {
     // ================= VARIABLES ===================
 
@@ -34,6 +35,7 @@ $(document).ready(function() {
     // REFERENCE FORM.HTML INPUT FROM DATABASE
     database.ref().child(id).once("value").then(function(snapshot) {
         // CALL DISPLAY DATA FUNCTION
+        snap = snapshot
         displayData(snapshot);
     })
 
@@ -68,7 +70,7 @@ $(document).ready(function() {
         var geocoder = new google.maps.Geocoder();
         // should be gotten from firebase object
         // we need make event address a global variable
-        var address = database.ref().val().location;
+        var address = snap.val().location;
         console.log(address);
 
         geocoder.geocode({ address: address }, function(results, status) {
