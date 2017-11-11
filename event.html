@@ -2,7 +2,12 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="/Users/alex/Desktop/coding bootcamp/projects/Project1/assets/event.css">
+
+    <!-- Bootswatch -->
+    <link rel=“stylesheet” type=“text/css” href=“https://bootswatch.com/4/lux/bootstrap.min.css“>
+
 </head>
 
 <body>
@@ -86,6 +91,36 @@
                </table>
            </div>
        </div>
+        </div>
+        <div class="panel panel-default col-md-6 col-sm-6 col-xs-6">
+            <div class="panel-heading">Need a ride? Get there with Uber!</div>
+            <!-- Trigger the modal with a button -->
+            <button type="button" id="uber-submit" class="btn btn-info btn-lg center-block">Get Estimates</button>
+            <div class="table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Estimates
+                                <th>uberX</th>
+                                <th>uberXL</th>
+                                <th>uberBLACK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Time</td>
+                            <td id="uber_x_time"> -- mins</td>
+                            <td id="uber_xl_time"> -- mins</td>
+                            <td id="uber_black_time"> -- mins</td>
+                            <tr>
+                                <td>Price</td>
+                                <td id="uber_x_price">$--.--</td>
+                                <td id="uber_xl_price">$--.--</td>
+                                <td id="uber_black_price">$--.--</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <!-- END CONTAINER -->
