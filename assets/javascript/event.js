@@ -67,6 +67,8 @@ $(document).ready(function () {
     // CALL FUNCTIONS ON READY
     shareUrl();
 
+     
+
     // ================= ON CLICKS ===================
 
 }); // END READY FUNCTION
