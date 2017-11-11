@@ -5,98 +5,103 @@
     <meta charset="utf-8">
     <title>AJJA Event Planning </title>
     <!-- Bootstrap -->
-<<<<<<< HEAD
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-
-=======
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
->>>>>>> 0dfd753526c7e1ab1099e9d11866da288cc555ed
-    <!-- Firebase link -->
+    <!-- Bootswatch -->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <div class="container">
-
         <!-- Page title / logo -->
-        <div class="jumbotron">
-            <h1 class="text-center">Welcome to AJJA Event Planning! </h1>
+        <div class="title">
+            <h1 class="text-center"> AJJA Event Planning </h1>
         </div>
 
-        <!-- Insert Image/Design --> 
-
-     
-
-
+        <!-- Insert Image Carousel-->
+        <div id="ajjaCarousel" class="carousel slide" data-ride="carousel" data-interval="7000" data-pause="null">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="assets/images/ajja-banner.jpg" alt="Welcome">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ajja-banner2.jpg" alt="Ajja">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ajja-banner3.jpg" alt="perks">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Sign-Up Panel-->
         <div class="col-md-12 panel panel-heading">
-              <h3 class="panel-title">Create your event: </h3>
-            </div>
-
+            <h3 class="panel-title">Event Details </h3>
+        </div>
         <!--  Form -->
-
-
         <div class="panel-body">
             <form role="form">
                 <div class="form-group">
                     <label for="name-input">Event Title:</label>
                     <input class="form-control" id="event-title" type="text">
                 </div>
-
                 <div class="form-group">
                     <label for="host-input">Hosted by:</label>
                     <input class="form-control" id="event-host" type="text">
                 </div>
-
                 <div class="form-group">
                     <label for="date-input">Date:</label>
                     <input class="form-control" id="event-date" type="date">
                 </div>
-
                 <div class="form-group">
                     <label for="time-input">Time:</label>
                     <input class="form-control" id="event-time" type="time">
                 </div>
-
-
-                 <!--    jQuery Geocoding and Places Autocomplete Plugin ADD TO ADDR????  -->
-
+                <!--    jQuery Geocoding and Places Autocomplete Plugin ADD TO ADDR????  -->
                 <div class="form-group">
                     <label for="location-input">Where</label>
                     <input class="form-control" id="event-location" type="city">
                 </div>
-
-
                 <div class="form-group">
                     <label for="description-input">Description</label>
                     <textarea class="form-control" id="event-description" rows="5"></textarea>
                 </div>
-<<<<<<< HEAD
-                <button class="btn btn-default" id="submit" type="submit">Create Event!</button>
-=======
+                <!-- <button class="btn btn-default" id="submit" type="submit">Create Event!</button> -->
                 <button class="btn btn-default" id="add-event" type="submit">Share!</button>
->>>>>>> 0dfd753526c7e1ab1099e9d11866da288cc555ed
             </form>
         </div>
     </div>
-
-
+    <footer>
+        <img src="assets/images/ajja-footer2.png" class="img-fluid float-center" style="width:100%">
+        <div id="copyright"> &#9400; 2017 Ajja Events. All Rights Reserved.</div>
+    </footer>
     <!-- jQuery minified-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Javascript -->
+    <script src="assets/javascript/form.js"></script>
+    <!--  Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
+    // Initialize Firebase
+    var config = {
         apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
         authDomain: "ajja-party-evite.firebaseapp.com",
         databaseURL: "https://ajja-party-evite.firebaseio.com",
         projectId: "ajja-party-evite",
         storageBucket: "ajja-party-evite.appspot.com",
         messagingSenderId: "128520116147"
-      };
-      firebase.initializeApp(config);
+    };
+    firebase.initializeApp(config);
     </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
-    <script src="assets/javascript/form.js"></script>
 </body>
 
 </html>

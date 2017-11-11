@@ -1,0 +1,45 @@
+
+body {
+	height: 100%;
+	
+	/*background-image: url("../images/greyz2.png");*/
+}
+
+.title {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+
+* {
+   font-size: 14px;
+   line-height: 2;
+
+}
+
+.form-control {
+	font-size: 14px;
+}
+
+.panel-title {
+	text-align: center;
+
+}
+
+#add-event {
+	font-size: 12px;
+}
+
+footer #copyright {
+	font-size: 12px;
+	text-align:center;
+ 	width: 100%;
+ 	padding: 20px 0;
+  	clear: both;
+  	display: block;
+}
