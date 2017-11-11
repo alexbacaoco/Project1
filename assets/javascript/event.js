@@ -124,6 +124,9 @@ function getTimeEstimate(pos, eventPos) {
             $("#uber_xl_time").text(response.data.times[2].estimate + " mins");
             $("#uber_black_time").text(response.data.times[4].estimate + " mins");
         })
+        .catch(function(err) {
+            console.error(err)
+        });
 }
 //Estimated Trip Price Get Function
 function getPriceEstimate(pos, eventPos) {
@@ -145,7 +148,6 @@ function getPriceEstimate(pos, eventPos) {
             $("#uber_xl_price").text(response.data.prices[2].estimate);
             $("#uber_black_price").text(response.data.prices[4].estimate);
         })
-
         .catch(function(error) {
             console.log(error)
         })
