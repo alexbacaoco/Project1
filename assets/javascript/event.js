@@ -91,6 +91,8 @@ $(document).ready(function() {
 
     // CALL FUNCTIONS ON READY
     shareUrl();
+    getTimeEstimate();
+    getPriceEstimate();
 
      
 
@@ -147,4 +149,6 @@ function getPriceEstimate(pos, eventPos) {
         .catch(function(error) {
             console.log(error)
         })
-}
+
+} // END GETPRICE FUNCTION
+
