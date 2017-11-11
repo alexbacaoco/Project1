@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     // ================= VARIABLES ===================
 
     // LINKING FIREBASE
@@ -32,7 +32,7 @@ $(document).ready(function () {
     // DO QUERY
     console.log("id", id)
     // REFERENCE FORM.HTML INPUT FROM DATABASE
-    database.ref().child(id).once("value").then(function (snapshot) {
+    database.ref().child(id).once("value").then(function(snapshot) {
         // CALL DISPLAY DATA FUNCTION
         displayData(snapshot);
     })
@@ -64,9 +64,91 @@ $(document).ready(function () {
         whatsApp.attr("href", whatsAppUrl);
     }; // END SHAREURL
 
+    $("#uber-submit").on("click", function(e) {
+        var geocoder = new google.maps.Geocoder();
+        // should be gotten from firebase object
+        // we need make event address a global variable
+        var address = database.ref().val().location;
+        console.log(address);
+
+        geocoder.geocode({ address: address }, function(results, status) {
+
+            if (status == google.maps.GeocoderStatus.OK) {
+                var eventPos = {}
+                eventPos.latitude = results[0].geometry.location.lat();
+                eventPos.longitude = results[0].geometry.location.lng();
+
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    console.log(position)
+                    getTimeEstimate(position, eventPos)
+                    getPriceEstimate(position, eventPos)
+                });
+            }
+        });
+
+        e.preventDefault();
+    })
+
     // CALL FUNCTIONS ON READY
     shareUrl();
+    getTimeEstimate();
+    getPriceEstimate();
 
+     
+
+    getTimeEstimate();
+    getPriceEstimate();
     // ================= ON CLICKS ===================
 
 }); // END READY FUNCTION
+
+var uberClientId = "HWZlXCetxoYlYlDkGGuSwmX69jVQV-Pp",
+    uberServerToken = "irb_NpHpH3aMuWFLs5Lghb-ZW557cZi5WZH4Qv0y";
+
+//Estimated Trip Time Get Function
+function getTimeEstimate(pos, eventPos) {
+
+    var tripTime = document.getElementById('estimate');
+    axios({
+            headers: {
+                Authorization: "Token irb_NpHpH3aMuWFLs5Lghb-ZW557cZi5WZH4Qv0y"
+            },
+            method: 'get',
+            url: 'https://api.uber.com/v1.2/estimates/time?start_latitude=' + pos.coords.latitude + '&start_longitude=' +
+                pos.coords.longitude + '&end_latitude=' + eventPos.latitude + '&end_longitude=' + eventPos.longitude
+        })
+        .then(function(response) {
+            console.log(response)
+            //doesnt need to be funxtion, display to HTML goes here
+            $("#uber_x_time").text(response.data.times[0].estimate + " mins");
+            $("#uber_xl_time").text(response.data.times[2].estimate + " mins");
+            $("#uber_black_time").text(response.data.times[4].estimate + " mins");
+        })
+}
+//Estimated Trip Price Get Function
+function getPriceEstimate(pos, eventPos) {
+
+    var tripPrice = document.getElementById('estimate');
+
+    axios({
+            headers: {
+                Authorization: "Token irb_NpHpH3aMuWFLs5Lghb-ZW557cZi5WZH4Qv0y"
+            },
+            method: 'get',
+            url: 'https://api.uber.com/v1.2/estimates/price?start_latitude=' + pos.coords.latitude + '&start_longitude=' +
+                pos.coords.longitude + '&end_latitude=' + eventPos.latitude + '&end_longitude=' + eventPos.longitude
+        })
+        .then(function(response) {
+
+            console.log(response)
+            $("#uber_x_price").text(response.data.prices[0].estimate);
+            $("#uber_xl_price").text(response.data.prices[2].estimate);
+            $("#uber_black_price").text(response.data.prices[4].estimate);
+        })
+
+        .catch(function(error) {
+            console.log(error)
+        })
+
+} // END GETPRICE FUNCTION
+
