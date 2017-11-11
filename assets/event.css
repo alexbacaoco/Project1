@@ -1,0 +1,8 @@
+/*this css stylesheet is for the embedded map*/
+iframe {
+	margin-left: 750px;
+	margin-top: 535px;
+	margin-bottom: 300px;
+	position: absolute;
+
+}

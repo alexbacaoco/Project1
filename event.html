@@ -2,11 +2,18 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/Users/alex/Desktop/coding bootcamp/projects/Project1/assets/event.css">
+
     <!-- Bootswatch -->
     <link rel=“stylesheet” type=“text/css” href=“https://bootswatch.com/4/lux/bootstrap.min.css“>
+
 </head>
 
 <body>
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBC7YuGb7yZa04LS7hRiCmimkhElWpSf24&origin=Irvine+California&destination=University+of+California+Irvine+Division+of+Continuing+Education&avoid=tolls|highways" allowfullscreen>
+    </iframe>
+
     <div class="container">
         <div class="row">
             <div class="jumbotron">
@@ -23,13 +30,13 @@
             <div class="panel panel-default col-md-9 col-sm-12 col-xs-12">
                 <div class="panel-body">
                     <div id="event-info">
-                        <p id="eventDate">
+                        <p>Date:</p><p id="eventDate">
                             <!-- EVENT DATE -->
                         </p>
-                        <p id="eventTime">
+                        <p>Time:</p><p id="eventTime">
                             <!-- EVENT TIME -->
                         </p>
-                        <p id="eventLocation">
+                        <p>Location:</p><p id="eventLocation">
                             <!-- EVENT LOCATION -->
                         </p>
                         <!-- IF DESCRIPTION HAS INPUT DISPLAY HERE -->
@@ -48,13 +55,42 @@
                             <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter" />
                         </a>
                         <!-- SHARE WHATSAPP -->
-                        <a id="share-whatsApp" href=""
-                            target="_blank">
+                        <a id="share-whatsApp" href="" target="_blank">
                             <img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/whatsapp.png" border="0" alt="WhatsApp"/>
                         </a>
                     </div>
                 </div>
             </div>
+       <div class="panel panel-default col-md-6 col-sm-6 col-xs-6">
+           <div class="panel-heading">Need a ride? Get there with Uber!</div>
+           <!-- Trigger the modal with a button -->
+           <button type="button" id="uber-submit" class="btn btn-info btn-lg center-block">Get Estimates</button>
+           <div class="table">
+               <table class="table">
+                   <thead>
+                       <tr>
+                           <th>Estimates
+                               <th>uberX</th>
+                               <th>uberXL</th>
+                               <th>uberBLACK</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>Time</td>
+                           <td id="uber_x_time"> -- mins</td>
+                           <td id="uber_xl_time"> -- mins</td>
+                           <td id="uber_black_time"> -- mins</td>
+                           <tr>
+                               <td>Price</td>
+                               <td id="uber_x_price">$--.--</td>
+                               <td id="uber_xl_price">$--.--</td>
+                               <td id="uber_black_price">$--.--</td>
+                           </tr>
+                   </tbody>
+               </table>
+           </div>
+       </div>
         </div>
         <div class="panel panel-default col-md-6 col-sm-6 col-xs-6">
             <div class="panel-heading">Need a ride? Get there with Uber!</div>
@@ -93,19 +129,18 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
-            authDomain: "ajja-party-evite.firebaseapp.com",
-            databaseURL: "https://ajja-party-evite.firebaseio.com",
-            projectId: "ajja-party-evite",
-            storageBucket: "ajja-party-evite.appspot.com",
-            messagingSenderId: "128520116147"
-        };
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBGiZeTLScpWWJwi1EqOr0Y3JZTObSsYxY",
+        authDomain: "ajja-party-evite.firebaseapp.com",
+        databaseURL: "https://ajja-party-evite.firebaseio.com",
+        projectId: "ajja-party-evite",
+        storageBucket: "ajja-party-evite.appspot.com",
+        messagingSenderId: "128520116147"
+    };
 
-        firebase.initializeApp(config);
+    firebase.initializeApp(config);
     </script>
-
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/javascript/event.js"></script>
 </body>

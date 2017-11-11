@@ -91,6 +91,9 @@ $(document).ready(function() {
 
     // CALL FUNCTIONS ON READY
     shareUrl();
+
+     
+
     getTimeEstimate();
     getPriceEstimate();
     // ================= ON CLICKS ===================
